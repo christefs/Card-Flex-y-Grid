@@ -1,0 +1,141 @@
+:root {
+    --Title-size: 30px;
+    --Subtitle-size: 18px;
+    --Links-size: 20px
+}
+
+body {
+    margin: 15px;
+}
+
+.CardContainer {
+    width: 350px;
+    height: 480px;
+    background: #F56751 ;
+    border-radius: 7px;
+    border: 3px solid #3B5FF0;
+
+    display: grid;
+    
+    grid-template-rows: 80px 80px 80px 80px 80px 80px;
+}
+
+.UpBar {
+    grid-row-start: 1;
+
+    display: grid;
+    grid-template-columns: 70px 280px;
+
+    .Logo {
+        grid-column: 1/2;
+
+        display: grid;
+        width: 70px;
+        height: 88px;
+        justify-items: center;
+        align-items: center;
+        
+
+        .ImgLogo {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .Titles {
+        
+
+        grid-column: 2/3;
+
+        width: 280px;
+        height: 88px;
+        
+
+        h1 {
+            margin-bottom: 5px;
+        }
+        
+        
+        h2 {
+            font-size: var(--Subtitle-size);
+            
+            margin-top: 5px;
+        }
+    }
+}
+
+.Central {
+    grid-row-start: 2;
+    margin-top: 8px;
+    height: 200px;
+
+    img {
+        width: 100%;
+    }
+
+}
+
+
+.DownBar {
+    grid-row-start: 4;
+
+    display: grid;
+    grid-template-rows: 80px 80px 80px;
+
+    p {
+        margin: 65px 9px 0 9px;
+
+        #Expand {
+            cursor: pointer;
+            font-weight: bold;
+            
+        }
+        #Expand:hover {
+            font-size: 18px;
+        }
+    }
+
+
+    .Actions {
+        grid-row-start: 3;
+
+        display: grid;
+        grid-template-columns: 270px 80px;
+        grid-template-rows: 80px;
+
+        .Links {
+            grid-column-start: 1;
+
+            display: grid;
+            grid-template-columns: 90px 180px;
+            align-content: center;
+
+            .Link1 {
+                font-size: var(--Links-size);
+                grid-column-start: 1;
+                margin-left: 9px;
+                cursor: pointer;
+            }
+            .Link2 {
+                font-size: var(--Links-size);
+                grid-column-start: 2;
+                cursor: pointer;
+            }
+        }
+        .Icons {
+            grid-column-start: 2;
+            
+            align-content: center;
+
+            .LoveIcon {
+                margin: 0 4.5px 0 7px;
+                cursor: pointer;
+            }
+            .ShareIcon {
+                margin: 0 0 0 4.5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+

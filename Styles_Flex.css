@@ -1,0 +1,99 @@
+:root {
+    --Title-size: 30px;
+    --Subtitle-size: 18px;
+    --Links-size: 20px
+}
+
+body {
+    margin: 15px;
+}
+
+.CardContainer {
+    width: 350px;
+    height: 480px;
+    background: #3B5FF0;
+    border-radius: 7px;
+    border: 3px solid #F56751;
+
+    
+}
+
+.UpBar {
+    display: flex;
+    align-items: center;
+    
+    .Logo {
+        display: flex;
+        justify-content: center;
+        width: 70px;
+        .ImgLogo {
+            width: 40px;
+            height: 40px;
+        }
+        
+    }
+    .Titles {
+        h1 {
+            margin-bottom: 5px;
+        }
+        h2 {
+            font-size: var(--Subtitle-size);
+            margin-top: 5px;
+        }
+    }
+    
+}
+.Central img {
+    width: 100%;
+}
+
+.DownBar {
+    padding: 0 10px 7px 10px;
+
+    p {
+        margin-bottom: 0;
+
+        #Expand {
+            cursor: pointer;
+            font-weight: bold;
+            
+        }
+        #Expand:hover {
+            font-size: 18px;
+        }
+    }
+
+    .Actions {
+        display: flex;
+        
+        justify-content: space-between;
+
+    
+        .Links {
+            display: flex;
+
+            .Link1 {
+                margin-right: 15px;
+                font-size: var(--Links-size);
+                cursor: pointer;
+            }
+            .Link2 {
+                font-size: var(--Links-size);
+                cursor: pointer;
+            }
+            
+        }
+        .Icons {
+            display: flex;
+
+            .LoveIcon {
+                cursor: pointer;
+            }
+            .ShareIcon {
+                margin-left: 15px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
