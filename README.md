@@ -1,0 +1,1 @@
+Se establecen dos versiones muy similares de una misma card utilizando html y css, la que tiene el nombre Index_Flex.html fue realizada con la herramienta Flex y la que tiene el nombre Index_Grid.html fue realizada con la herramienta Grid. El resultado es casi igual aunque se varían algunos colores para diferenciarlas.
