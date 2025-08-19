@@ -85,6 +85,10 @@ body {
         }
         .Icons {
             display: flex;
+            width: 50%;
+            height: 50%;
+            justify-content: flex-end;
+            padding-top: 15px;
 
             .LoveIcon {
                 cursor: pointer;
