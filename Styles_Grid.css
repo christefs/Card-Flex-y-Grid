@@ -142,3 +142,15 @@ body {
     }
 }
 
+.Change {
+    background-color: #3B5FF0;
+    border: 3px solid #F56751;
+    border-radius: 5px;
+    a {
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+        font-weight: 400;
+    } 
+}
+
