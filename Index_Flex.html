@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Styles_Flex.css">
     <title>Document</title>
+
+     
 </head>
 <body>
     <section class="CardContainer">
@@ -17,11 +19,12 @@
                 <h2>El hombre de acero</h2>
             </div>
         </div>
-        <div class="Central">
+        <div id="Image" class="Central Ocultar">
             <img class="PrincipalImg" src="./Imgs/ImagenCard.jpg" alt="Imagen de la card">
         </div>
         <div class="DownBar">
-            <p>Proveniente del desaparecido planeta Kripton, Superman, también conocido como «El Hombre de Acero», «El Hombre del Mañana» y «El Último Hijo de Krypton», es un super héroe con habilidades sobrehumanas que usa en beneficio de la humanidad. <span id="Expand"> Leer más </span></p>
+            <!--<p>Proveniente del desaparecido planeta Kripton, Superman, también conocido como «El Hombre de Acero», «El Hombre del Mañana» y «El Último Hijo de Krypton», es un super héroe con habilidades sobrehumanas que usa en beneficio de la humanidad. <span id="Expand"> Leer más </span></p>-->
+            <p>Proveniente del desaparecido planeta Kripton, Superman, también conocido como «El Hombre de Acero», «El Hombre del Mañana» y «El Último Hijo de Krypton», es un super héroe con habilidades sobrehumanas que usa en beneficio de la humanidad.<span id="Additional" class="Hide">Fue enviado por sus padres biológicos Jor-El y Lara en una nave espacial al planeta Tierra para salvarlo de la explosión de Kriptón y en su llegada a la tierra fue rescatado y adoptado por Jonathan y Martha Kent quienes lo llamaron Clark Kent y lo criaron con amor y valores que le permitieron forjar un caracter con principios éticos. Desarrolló habilidades que incluyen vuelo, super fuerza y velocidad, visión calorífica, aliento gélido y vista de rayos X que usa en su misión de proteger a la humanidad de todo tipo de amenazas.</span><a href="#" id="Expand"> Leer más </a><a href="#" id="Collapse" class="Hide"> Leer menos </a></p>
             <div class="Actions">
                 <div class="Links">
                     <h2 class="Link1">Historia</h2>
@@ -40,5 +43,31 @@
         </button>
         
     </div>
+
+    <script>
+        const boton = document.getElementById("Expand");
+        const boton2 = document.getElementById("Collapse");
+        const imagen = document.getElementById("Image")
+        const parrafo = document.getElementById("Additional");
+
+        boton.addEventListener('click', function(event) {
+            
+            imagen.classList.add('Hide');
+            parrafo.classList.remove('Hide');
+            boton.classList.add('Hide');
+            boton2.classList.remove('Hide');
+                    
+        }); /* Bloque que desaparece la imagen y extiende la descripción de la Card al pulsar el link "Leer más" */
+
+        boton2.addEventListener('click', function(event) {
+
+            imagen.classList.remove('Hide');
+            parrafo.classList.add('Hide');
+            boton.classList.remove('Hide');
+            boton2.classList.add('Hide');
+
+        }); /* Bloque que reaparece la imagen y recorta la descripción de la Card al pulsar el link "Leer menos" */
+
+    </script>
 </body>
 </html>

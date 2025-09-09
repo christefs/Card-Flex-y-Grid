@@ -48,18 +48,24 @@ body {
     width: 100%;
 }
 
+/*Estilo usado para ocultar contenedores*/
+.Hide {
+    display: none;
+}
+
+
 .DownBar {
     padding: 0 10px 7px 10px;
 
     p {
         margin-bottom: 0;
 
-        #Expand {
+        #Expand, #Collapse {
             cursor: pointer;
             font-weight: bold;
             
         }
-        #Expand:hover {
+        #Expand:hover, #Collapse:hover {
             font-size: 18px;
         }
     }

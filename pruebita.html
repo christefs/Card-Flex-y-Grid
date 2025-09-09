@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <style>
+      /*  .elemento-oculto {
+            display: none;
+        }*/
+        .oculto {
+            display: none;
+        }
+        
+
+           
+    </style>
+
+    
+
+     
+
+    
+</head>
+<body>
+   
+    <!--<a href="#" id="enlacelimpiar">Limpiar</a>
+<br>
+<div id="limpiar">
+    Contenido que se debe limpiar con Javascript
+    al hacer clic en el enlace
+</div> -->
+<!--<a href="#" id="enlace-mostrar-ocultar">Mostrar/Ocultar</a>
+
+<div class="elemento-oculto">Elemento 1</div>
+<div class="elemento-oculto">Elemento 2</div>
+<div class="elemento-oculto">Elemento 3</div> 
+
+<a href="#miParrafo" id="miEnlace">Mostrar/Ocultar</a> -->
+
+<a href="#" id="miBoton">Mostrar/Ocultar</a>
+<a href="#" id="miBoton2" class="oculto">Ocultar/Mostrar</a>
+<div id="miElemento" class="oculto">Este es un contenedor</div>
+<p id="miParrafo">Este es un párrafo.</p>
+
+<script>
+        const boton = document.getElementById("miBoton");
+        const boton2 = document.getElementById("miBoton2");
+        const elemento = document.getElementById("miElemento");
+        const parrafo = document.getElementById("miParrafo");
+
+        boton.addEventListener('click', function(event) {
+            elemento.classList.remove('oculto');
+            parrafo.classList.add('oculto');
+            boton2.classList.remove('oculto');
+            boton.classList.add('oculto');
+        
+        });
+
+        boton2.addEventListener('click', function(event) {
+            elemento.classList.add('oculto');
+            parrafo.classList.remove('oculto');
+            boton.classList.remove('oculto');
+            boton2.classList.add('oculto');
+
+        })
+    </script>
+
+</body>
+</html>

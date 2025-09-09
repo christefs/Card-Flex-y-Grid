@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <section class="CardContainer">
+    <section id="TotalGrid" class="CardContainer">
         <div class="UpBar">
             <div class="Logo">
                 <img class="ImgLogo" src="./Imgs/DC_Comics_logo.jpg" alt="Logo de la card">
@@ -17,12 +17,12 @@
                 <h2>El hombre de acero</h2>
             </div>
         </div>
-        <div class="Central">
+        <div id="Image" class="Central">
             <img class="PrincipalImg" src="./Imgs/ImagenCard2.jpg" alt="Imagen de la card">
         </div>
-        <div class="DownBar">
-            <p>Proveniente del desaparecido planeta Kripton, Superman, también conocido como «El Hombre de Acero», «El Hombre del Mañana» y «El Último Hijo de Krypton», es un super héroe con habilidades sobrehumanas que usa en beneficio de la humanidad. <span id="Expand"> Leer más </span></p>
-            <div class="Actions">
+        <div id="Paragraph" class="DownBar">
+            <p>Proveniente del desaparecido planeta Kripton, Superman, también conocido como «El Hombre de Acero», «El Hombre del Mañana» y «El Último Hijo de Krypton», es un super héroe con habilidades sobrehumanas que usa en beneficio de la humanidad. <span id="Additional" class="Hide">Fue enviado por sus padres biológicos Jor-El y Lara en una nave espacial al planeta Tierra para salvarlo de la explosión de Kriptón y en su llegada a la tierra fue rescatado y adoptado por Jonathan y Martha Kent quienes lo llamaron Clark Kent y lo criaron con amor y valores que le permitieron forjar un caracter con principios éticos. Desarrolló habilidades que incluyen vuelo, super fuerza y velocidad, visión calorífica, aliento gélido y vista de rayos X que usa en su misión de proteger a la humanidad de todo tipo de amenazas.</span> <a href="#" id="Expand"> Leer más </a><a href="#" id="Collapse" class="Hide"> Leer menos </a></p>
+            <div id="ActionLinks" class="Actions">
                 <div class="Links">
                     <h2 class="Link1">Historia</h2>
                     <h2 class="Link2">Referencias</h2>
@@ -40,5 +40,50 @@
         </button>
         
     </div>
+
+    <script>
+        const boton = document.getElementById("Expand");
+        const boton2 = document.getElementById("Collapse");
+        const imagen = document.getElementById("Image");
+        const parrafo = document.getElementById("Additional");
+
+        const parrafoPrimario = document.getElementById("Paragraph");
+        const Enlaces = document.getElementById("ActionLinks");
+
+        boton.addEventListener("click", function(event) {
+
+            imagen.classList.add('Hide');
+            parrafo.classList.remove('Hide');
+            boton.classList.add('Hide');
+            boton2.classList.remove('Hide');
+
+            parrafoPrimario.style.gridRowStart = "2";
+            parrafoPrimario.style.marginTop = "-32px";
+            parrafoPrimario.style.display = "grid";
+            parrafoPrimario.style.gridTemplateRows = "80px 80px 80px 80px 80px 80px"; 
+
+            Enlaces.style.gridRowStart = "6";
+            Enlaces.style.marginTop = "-45px"
+
+        }); /* Bloque que desaparece la imagen y extiende la descripción de la Card al pulsar el link "Leer más" */
+
+        boton2.addEventListener("click", function(event) {
+
+            imagen.classList.remove('Hide');
+            parrafo.classList.add('Hide');
+            boton.classList.remove('Hide');
+            boton2.classList.add('Hide');
+
+            parrafoPrimario.style.gridRowStart = "4";
+            parrafoPrimario.style.marginTop = "5px"
+            parrafoPrimario.style.display = "grid";
+            parrafoPrimario.style.gridTemplateRows = "80px 80px 80px";
+            
+            Enlaces.style.gridRowStart = "3";
+            Enlaces.style.marginTop = "2px";
+
+        }); /* Bloque que reaparece la imagen y recorta la descripción de la Card al pulsar el link "Leer menos" */
+        
+    </script>
 </body>
 </html>

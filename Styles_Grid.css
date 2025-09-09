@@ -78,6 +78,13 @@ body {
 
 }
 
+/*Estilo usado para ocultar contenedores*/
+.Hide {
+    display: none;
+    
+}
+
+
 
 .DownBar {
     grid-row-start: 4;
@@ -88,12 +95,12 @@ body {
     p {
         margin: 65px 9px 0 9px;
 
-        #Expand {
+        #Expand, #Collapse {
             cursor: pointer;
             font-weight: bold;
             
         }
-        #Expand:hover {
+        #Expand:hover, #Collapse:hover {
             font-size: 18px;
         }
     }
